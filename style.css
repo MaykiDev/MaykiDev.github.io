@@ -379,9 +379,10 @@ body.menu-open { overflow: hidden; }
 }
 
 .benefits-content-1 {
-  display: grid;
-  align-items: center;
-  justify-content: center;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  text-align: left;
 }
 
 .benefits-image { display: flex; justify-content: center; }
@@ -536,7 +537,7 @@ body.menu-open { overflow: hidden; }
 
 .speaker-info h3 {
   margin: 0 0 8px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.6px;
@@ -544,7 +545,7 @@ body.menu-open { overflow: hidden; }
 
 .speaker-info p {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-style: italic;
   opacity: 0.78;
   line-height: 1.45;
@@ -1106,7 +1107,6 @@ body.modal-open{
   max-height: 520px;
   object-fit: cover;
   border-radius: 18px;
-  filter: grayscale(1);
 }
 
 .speaker-modal__body{
