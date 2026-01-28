@@ -24,6 +24,10 @@
   --focus: 0 0 0 3px rgba(247, 195, 17, 0.35);
 }
 
+#ingressos {
+  scroll-margin-top: 80px; /* A altura do seu menu fixo */
+}
+
 /* ------ RESET/BASE ------ */
 *,
 *::before,
