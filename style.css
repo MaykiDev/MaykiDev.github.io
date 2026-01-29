@@ -1810,16 +1810,18 @@ body.modal-open{
 /* ===== FIX SCROLL MODAL ===== */
 
 /* 1) o dialog vira um container com altura definida */
-.speaker-modal__dialog{
-  display: flex;
-  flex-direction: column;
+@supports (height: 100dvh){
+  .speaker-modal__dialog{
+    display: flex;
+    flex-direction: column;
 
-  /* use dvh (melhor no mobile) + fallback */
-  max-height: calc(100vh - 28px);
-  max-height: calc(100dvh - 28px);
+    /* use dvh (melhor no mobile) + fallback */
+    max-height: calc(100vh - 28px);
+    max-height: calc(100dvh - 28px);
 
-  /* opcional mas ajuda a “travar” em desktops */
-  height: min(720px, calc(100dvh - 28px));
+    /* opcional mas ajuda a “travar” em desktops */
+    height: min(720px, calc(100dvh - 28px));
+  }
 }
 
 /* 2) o conteúdo precisa ocupar a altura do dialog */
