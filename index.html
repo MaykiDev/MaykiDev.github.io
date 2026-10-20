@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IFCT Contabilidade — Especialistas em Lucro Real</title>
+  <meta name="description" content="IFCT Contabilidade: planejamento tributário, recuperação de créditos e gestão contábil estratégica para empresas do Lucro Real, Presumido e Simples Nacional. Atendimento em 21 estados.">
+  <meta name="theme-color" content="#071A3D">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Sprite de ícones (traço fino, consistente em todo o site) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 21a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z" fill="currentColor"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m20 20-3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-whats" viewBox="0 0 24 24"><path d="M12 2.5A9.5 9.5 0 0 0 3.8 16.8L2.5 21.5l4.8-1.3A9.5 9.5 0 1 0 12 2.5m0 17.3a7.8 7.8 0 0 1-4-1.1l-.3-.2-2.8.8.8-2.8-.2-.3A7.8 7.8 0 1 1 12 19.8m4.3-5.8c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8.9-.3.2-.5 0a6.4 6.4 0 0 1-3.2-2.8c-.2-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.7-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.6.3 2.7 2.7 0 0 0-.9 2 4.7 4.7 0 0 0 1 2.5 10.7 10.7 0 0 0 4.1 3.6c1.5.7 2.1.7 2.9.6a2.4 2.4 0 0 0 1.6-1.1 2 2 0 0 0 .1-1.1c0-.1-.2-.2-.5-.3" fill="currentColor"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M5 9h3v10H5zM6.5 4.5a1.7 1.7 0 1 1 0 3.4 1.7 1.7 0 0 1 0-3.4M10.5 9h2.9v1.4c.4-.8 1.4-1.6 2.9-1.6 3 0 3.6 2 3.6 4.6V19h-3v-5c0-1.2 0-2.7-1.6-2.7s-1.9 1.3-1.9 2.6V19h-3z" fill="currentColor"/></symbol>
+  <!-- Ícones das soluções -->
+  <symbol id="s-plan" viewBox="0 0 32 32"><path d="M5 26V6M5 26h22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="m9 20 5-5 4 3 7-8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 10h4v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="s-book" viewBox="0 0 32 32"><rect x="6" y="4" width="20" height="24" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 10h10M11 15h10M11 20h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="s-open" viewBox="0 0 32 32"><path d="M5 27V12l11-7 11 7v15z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M13 27v-8h6v8" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="s-cert" viewBox="0 0 32 32"><rect x="4" y="6" width="24" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 12h8M9 16h5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="22" cy="17" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m20.5 20-1 6 2.5-1.5 2.5 1.5-1-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="s-back" viewBox="0 0 32 32"><path d="M8 12a9 9 0 1 1-1 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 6v6h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 11v10M13.5 13.5c0-1 1-1.6 2.5-1.6s2.5.7 2.5 1.7c0 2.4-5 1.2-5 3.7 0 1 1 1.7 2.5 1.7s2.5-.6 2.5-1.6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+  <symbol id="s-lock" viewBox="0 0 32 32"><rect x="7" y="14" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 14v-4a5 5 0 0 1 10 0v4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 19v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+</svg>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ============ CABEÇALHO ============ -->
+<header class="header" data-header>
+  <div class="topbar">
+    <div class="container topbar__in">
+      <p>Inteligência Fiscal e Consultoria Tributária · Atendimento em 21 estados</p>
+      <div class="topbar__links">
+        <a href="tel:+5566992044975"><svg><use href="#i-phone"/></svg>(66) 99204-4975</a>
+        <a href="https://www.instagram.com/ifctoficial/" target="_blank" rel="noopener">@ifctoficial</a>
+        <a class="topbar__client" href="#contato"><svg><use href="#i-user"/></svg>Área do cliente</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container nav">
+    <a class="logo" href="#topo" aria-label="IFCT Contabilidade — início">
+      <img src="assent/LOGO IFCT COLORIDA (fundo transparente).png" alt="IFCT Contabilidade" width="3058" height="1186">
+    </a>
+
+    <nav class="nav__menu" id="menu" aria-label="Principal" data-menu>
+      <ul>
+        <li><a href="#solucoes">Soluções</a></li>
+        <li><a href="#sobre">A IFCT</a></li>
+        <li><a href="#cfop">Consulta CFOP</a></li>
+        <li><a href="#noticias">Notícias</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <a class="btn btn--orange nav__cta-mobile" href="#contato">Solicitar proposta</a>
+      <p class="nav__mobile-foot">(66) 99204-4975 · CNPJ 17.915.640/0001-24</p>
+    </nav>
+
+    <a class="btn btn--orange btn--sm nav__cta" href="#contato">Solicitar proposta</a>
+
+    <button class="burger" type="button" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu" data-burger>
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="topo">
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow eyebrow--light"><span class="dot"></span>Especialistas em Lucro Real</p>
+      <h1 class="hero__title">Contabilidade que entende o <span class="hl">Lucro Real</span> por dentro.</h1>
+      <p class="hero__lead">Reduzimos riscos fiscais, recuperamos créditos tributários e transformamos números em decisão. Para empresas do Lucro Real, Presumido e Simples Nacional.</p>
+
+      <div class="hero__actions">
+        <a class="btn btn--orange" href="#contato">Solicitar proposta <svg><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--ghost-light" href="#cfop">Consultar CFOP</a>
+      </div>
+
+      <div class="hero__proof">
+        <div class="stars" aria-label="Nota 5 de 5 no Google">
+          <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+        </div>
+        <p><strong>5.0 no Google</strong> · mais de 1.300 empresas atendidas</p>
+      </div>
+    </div>
+
+    <!-- Painel ilustrativo: agenda fiscal do mês (mês preenchido via JS) -->
+    <div class="hero__visual" aria-hidden="true">
+      <div class="panel">
+        <div class="panel__head">
+          <div>
+            <span class="panel__kicker">Agenda fiscal</span>
+            <strong class="panel__month" data-month>Outubro</strong>
+          </div>
+          <span class="panel__badge">Em dia</span>
+        </div>
+        <ul class="panel__list">
+          <li><span class="day">15</span><div><b>EFD-Reinf · DCTFWeb</b><small>Transmissão</small></div><i class="ok"></i></li>
+          <li><span class="day">20</span><div><b>FGTS Digital · DAS</b><small>Recolhimento</small></div><i class="ok"></i></li>
+          <li><span class="day">25</span><div><b>PIS / COFINS</b><small>Apuração não cumulativa</small></div><i class="wait"></i></li>
+          <li><span class="day day--o">31</span><div><b>IRPJ / CSLL</b><small>Estimativa mensal</small></div><i class="wait"></i></li>
+        </ul>
+      </div>
+
+      <div class="chip-card">
+        <span class="chip-card__label">Levantamento de créditos</span>
+        <div class="chip-card__tags"><span>PIS/COFINS</span><span>ICMS-ST</span><span>INSS</span></div>
+        <div class="bar"><span style="--w:72%"></span></div>
+        <small>Análise em andamento</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Números -->
+  <div class="container">
+    <dl class="stats">
+      <div><dt>Empresas atendidas</dt><dd><span data-count="1300">1.300</span>+</dd></div>
+      <div><dt>Estados com clientes</dt><dd data-count="21">21</dd></div>
+      <div><dt>Colaboradores</dt><dd><span data-count="100">100</span>+</dd></div>
+      <div><dt>Sede operacional</dt><dd><span data-count="800">800</span><small>m²</small></dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ SEGMENTOS ============ -->
+<section class="segments" aria-label="Segmentos atendidos">
+  <div class="container segments__in">
+    <p>Segmentos que atendemos</p>
+    <div class="segments__marquee" data-marquee>
+      <div class="segments__track">
+        <ul>
+          <li>Autopeças</li><li>Indústria</li><li>Farmacêutico</li><li>Supermercados</li>
+          <li>Atacado</li><li>Serviços</li><li>Tecnologia</li><li>Agronegócio</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VANTAGENS / SOBRE ============ -->
+<section class="section about" id="sobre">
+  <div class="container about__grid">
+    <header class="about__head reveal">
+      <p class="eyebrow">Por que a IFCT</p>
+      <h2 class="h2">Você não fala com robôs. Fala com quem entende do seu imposto.</h2>
+      <p class="lead">A IFCT nasceu para transformar a contabilidade em ferramenta de crescimento para empresas que enfrentam a complexidade do Lucro Real. Hoje, essa mesma inteligência atende os três regimes tributários.</p>
+      <a class="link-arrow" href="#contato">Conversar com um especialista <svg><use href="#i-arrow"/></svg></a>
+    </header>
+
+    <ol class="pillars">
+      <li class="reveal">
+        <span class="pillars__n">01</span>
+        <h3>Atendimento consultivo e próximo</h3>
+        <p>Especialistas que conhecem a sua operação e estão disponíveis para orientar antes da decisão, não depois do problema.</p>
+      </li>
+      <li class="reveal">
+        <span class="pillars__n">02</span>
+        <h3>Planejamento tributário inteligente</h3>
+        <p>Estratégias legais que reduzem tributos, aproveitam créditos e aumentam a margem, com total segurança jurídica.</p>
+      </li>
+      <li class="reveal">
+        <span class="pillars__n">03</span>
+        <h3>Gestão contábil estratégica</h3>
+        <p>Relatórios pensados para o empresário ler e agir: performance, margem e previsibilidade de caixa.</p>
+      </li>
+      <li class="reveal">
+        <span class="pillars__n">04</span>
+        <h3>Tecnologia e automação</h3>
+        <p>Processos automatizados que garantem agilidade, integridade dos dados e entregas no prazo.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ SOLUÇÕES ============ -->
+<section class="section solutions" id="solucoes">
+  <div class="container">
+    <header class="section-head reveal">
+      <div>
+        <p class="eyebrow">Soluções</p>
+        <h2 class="h2">Tudo o que a sua empresa precisa, num só lugar.</h2>
+      </div>
+      <p class="section-head__aside">Contábil, fiscal, folha de pagamento, SPEDs (ECD, ECF), e-Lalur, e-Lacs e relatórios de gestão, com acompanhamento contínuo.</p>
+    </header>
+
+    <div class="sol-grid">
+      <article class="sol sol--feature reveal">
+        <svg class="sol__icon"><use href="#s-plan"/></svg>
+        <span class="sol__tag">Mais procurado</span>
+        <img class="sol__logo" src="assent/LOGO IFCT BRANCA (fundo transparente).png" alt="IFCT" width="3058" height="1186" loading="lazy">
+        <h3>Planejamento Tributário</h3>
+        <p>Identificamos oportunidades de economia, garantimos conformidade e apoiamos decisões estratégicas com base em simulações reais da sua operação.</p>
+        <a class="link-arrow link-arrow--light" href="#contato">Quero um diagnóstico <svg><use href="#i-arrow"/></svg></a>
+      </article>
+
+      <article class="sol reveal">
+        <svg class="sol__icon"><use href="#s-book"/></svg>
+        <h3>Contabilidade</h3>
+        <p>Conformidade legal, tributos otimizados e uma gestão financeira que você consegue acompanhar.</p>
+      </article>
+      <article class="sol reveal">
+        <svg class="sol__icon"><use href="#s-back"/></svg>
+        <h3>Recuperação Tributária</h3>
+        <p>Revisão de créditos de PIS, COFINS, ICMS-ST e INSS sobre verbas indenizatórias, recuperando o que foi pago a mais.</p>
+      </article>
+      <article class="sol reveal">
+        <svg class="sol__icon"><use href="#s-open"/></svg>
+        <h3>Abertura de Empresa</h3>
+        <p>Do enquadramento ideal ao CNPJ ativo. Cuidamos dos detalhes para você focar no negócio.</p>
+      </article>
+      <article class="sol reveal">
+        <svg class="sol__icon"><use href="#s-lock"/></svg>
+        <h3>Holding</h3>
+        <p>Proteção patrimonial, eficiência tributária e planejamento sucessório para grupos e famílias empresárias.</p>
+      </article>
+      <article class="sol reveal">
+        <svg class="sol__icon"><use href="#s-cert"/></svg>
+        <h3>Certificado Digital</h3>
+        <p>Assinatura de documentos com validade jurídica e acesso seguro aos sistemas do governo.</p>
+      </article>
+      <article class="sol sol--cta reveal">
+        <div>
+          <h3>Não sabe por onde começar?</h3>
+          <p>Em 30 minutos de conversa a gente identifica o regime ideal e os primeiros ganhos possíveis.</p>
+        </div>
+        <a class="btn btn--orange btn--sm" href="#contato">Agendar conversa <svg><use href="#i-arrow"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONSULTA CFOP ============ -->
+<section class="section cfop" id="cfop">
+  <div class="container cfop__grid">
+    <header class="cfop__intro reveal">
+      <p class="eyebrow">Ferramenta gratuita</p>
+      <h2 class="h2">Qual CFOP usar nesta nota?</h2>
+      <p class="lead">Responda três perguntas e veja o código fiscal mais comum para a sua operação. Uma ajuda rápida para o dia a dia do faturamento.</p>
+
+      <!-- Mini explicação do primeiro dígito -->
+      <div class="digits" aria-label="Como ler o primeiro dígito do CFOP">
+        <p class="digits__title">O primeiro dígito diz tudo</p>
+        <div class="digits__row">
+          <span class="digits__lbl">Entrada</span>
+          <b>1</b><b>2</b><b>3</b>
+        </div>
+        <div class="digits__row">
+          <span class="digits__lbl">Saída</span>
+          <b class="o">5</b><b class="o">6</b><b class="o">7</b>
+        </div>
+        <div class="digits__row digits__row--legend">
+          <span></span><small>Mesmo estado</small><small>Outro estado</small><small>Exterior</small>
+        </div>
+      </div>
+    </header>
+
+    <div class="tool reveal" data-tool>
+      <div class="tool__tabs" role="tablist" aria-label="Modo da consulta">
+        <button role="tab" aria-selected="true" aria-controls="tab-guia" id="t-guia" data-tab="guia">Descobrir o CFOP</button>
+        <button role="tab" aria-selected="false" aria-controls="tab-busca" id="t-busca" data-tab="busca" tabindex="-1">Buscar código</button>
+      </div>
+
+      <!-- Modo guiado -->
+      <div class="tool__panel" id="tab-guia" role="tabpanel" aria-labelledby="t-guia">
+        <fieldset class="field">
+          <legend><span>1</span>A nota é de…</legend>
+          <div class="seg" data-group="tipo">
+            <label><input type="radio" name="tipo" value="saida" checked><span>Saída <small>venda, remessa</small></span></label>
+            <label><input type="radio" name="tipo" value="entrada"><span>Entrada <small>compra, retorno</small></span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend><span>2</span>Para onde / de onde?</legend>
+          <div class="seg seg--3" data-group="local">
+            <label><input type="radio" name="local" value="estadual" checked><span>Mesmo estado</span></label>
+            <label><input type="radio" name="local" value="interestadual"><span>Outro estado</span></label>
+            <label><input type="radio" name="local" value="exterior"><span>Exterior</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label class="field__label" for="operacao"><span>3</span>Qual a operação?</label>
+          <div class="select">
+            <select id="operacao" data-operacao></select>
+          </div>
+        </div>
+
+        <output class="result" data-result aria-live="polite">
+          <div class="result__code">
+            <span class="result__kicker">CFOP sugerido</span>
+            <strong data-code>5102</strong>
+          </div>
+          <p class="result__desc" data-desc>Venda de mercadoria adquirida ou recebida de terceiros</p>
+          <p class="result__hint" data-hint></p>
+          <button class="btn btn--sm btn--line" type="button" data-copy>
+            <svg><use href="#i-copy"/></svg><span>Copiar código</span>
+          </button>
+        </output>
+      </div>
+
+      <!-- Modo busca -->
+      <div class="tool__panel" id="tab-busca" role="tabpanel" aria-labelledby="t-busca" hidden>
+        <label class="search">
+          <svg><use href="#i-search"/></svg>
+          <input type="search" placeholder="Digite o código ou uma palavra (ex.: 6102, bonificação)" data-search aria-label="Buscar CFOP">
+        </label>
+        <ul class="code-list" data-list></ul>
+        <p class="code-list__empty" data-empty hidden>Nenhum CFOP encontrado. Tente outra palavra ou fale com a gente.</p>
+      </div>
+
+      <p class="tool__note">Consulta orientativa com os CFOPs mais usados. Regimes especiais, benefícios fiscais e regras do seu estado podem mudar o código. Na dúvida, <a href="#contato">confirme com a IFCT</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HISTÓRIA ============ -->
+<section class="section story" id="historia">
+  <div class="container story__grid">
+    <figure class="story__media reveal">
+      <!-- Foto da sede (hospedada no site atual). Recomendo baixar e salvar em img/sede.webp -->
+      <img src="https://ifctcontabilidade.com.br/UtilFile/img/foto_sede.webp" alt="Sede da IFCT Contabilidade" loading="lazy" width="720" height="540">
+      <figcaption>Nova sede · mais de 800 m² de área operacional</figcaption>
+    </figure>
+
+    <div class="story__copy reveal">
+      <p class="eyebrow eyebrow--light">Nossa história</p>
+      <h2 class="h2">Começou num escritório improvisado em casa. Hoje são 21 estados.</h2>
+      <p>A IFCT — Inteligência Fiscal Consultoria Tributária nasceu na casa do sócio-proprietário Thiago Cavenaghi, com uma ideia ousada: descomplicar a contabilidade de quem está no Lucro Real.</p>
+
+      <ol class="timeline">
+        <li><span>O começo</span><p>Um pequeno escritório e o foco em inteligência tributária.</p></li>
+        <li><span>A virada</span><p>De escritório tradicional a referência em planejamento, compliance e performance.</p></li>
+        <li><span>Hoje</span><p>Mais de 1.300 clientes, 100+ colaboradores e sede própria com 800 m².</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEPOIMENTOS ============ -->
+<section class="section reviews" aria-labelledby="rev-title">
+  <div class="container">
+    <header class="section-head reveal">
+      <div>
+        <p class="eyebrow">Avaliações no Google</p>
+        <h2 class="h2" id="rev-title">Quem é cliente, recomenda.</h2>
+      </div>
+      <div class="score">
+        <strong>5.0</strong>
+        <div>
+          <div class="stars stars--o"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <small>Nota média no Google</small>
+        </div>
+      </div>
+    </header>
+
+    <!-- Substitua as iniciais e os nomes pelos autores reais das avaliações -->
+    <ul class="rev-track">
+      <li class="rev"><p>“Foco no ramo de Lucro Real, área que poucos conseguem atuar. Empresa nota 10.”</p><footer><span class="avatar">CM</span><div><b>Cliente IFCT</b><small>Comércio atacadista</small></div></footer></li>
+      <li class="rev"><p>“Contabilidade séria, com muita competência e credibilidade. Recomendo fortemente.”</p><footer><span class="avatar">RA</span><div><b>Cliente IFCT</b><small>Indústria</small></div></footer></li>
+      <li class="rev"><p>“Objetivos, super profissionais. Recomendo!”</p><footer><span class="avatar">JL</span><div><b>Cliente IFCT</b><small>Serviços</small></div></footer></li>
+      <li class="rev"><p>“O melhor escritório de contabilidade da cidade, do Mato Grosso e do Brasil!”</p><footer><span class="avatar">PS</span><div><b>Cliente IFCT</b><small>Agronegócio</small></div></footer></li>
+      <li class="rev"><p>“Empresa maravilhosa. Profissionais competentes e dedicados.”</p><footer><span class="avatar">MT</span><div><b>Cliente IFCT</b><small>Varejo</small></div></footer></li>
+      <li class="rev"><p>“Minha experiência foi ótima. Um excelente atendimento.”</p><footer><span class="avatar">AF</span><div><b>Cliente IFCT</b><small>Tecnologia</small></div></footer></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ NOTÍCIAS ============ -->
+<section class="section news" id="noticias">
+  <div class="container">
+    <header class="section-head reveal">
+      <div>
+        <p class="eyebrow">Notícias e conteúdos</p>
+        <h2 class="h2">O que muda para a sua empresa, explicado sem juridiquês.</h2>
+      </div>
+      <a class="link-arrow" href="https://www.youtube.com/@thiagocavenaghi" target="_blank" rel="noopener">Canal no YouTube <svg><use href="#i-arrow-up"/></svg></a>
+    </header>
+
+    <div class="filters" role="toolbar" aria-label="Filtrar notícias" data-filters>
+      <button class="is-active" data-filter="todas" aria-pressed="true">Todas</button>
+      <button data-filter="reforma" aria-pressed="false">Reforma Tributária</button>
+      <button data-filter="tributario" aria-pressed="false">Tributário</button>
+      <button data-filter="trabalhista" aria-pressed="false">Trabalhista</button>
+      <button data-filter="gestao" aria-pressed="false">Gestão</button>
+    </div>
+
+    <div class="news-grid" data-news>
+      <!-- Destaque: vídeo institucional (carrega o YouTube só ao clicar) -->
+      <article class="video-card" data-cat="gestao">
+        <button class="video-card__play" type="button" data-video="CEUewRUX_9o" aria-label="Assistir ao vídeo institucional da IFCT">
+          <span class="video-card__btn"><svg><use href="#i-play"/></svg></span>
+        </button>
+        <div class="video-card__body">
+          <span class="tag tag--o">Vídeo</span>
+          <h3>Como a IFCT transforma a gestão fiscal da sua empresa</h3>
+          <p>Conheça a metodologia, o time e a forma como tratamos o Lucro Real.</p>
+        </div>
+      </article>
+
+      <article class="post" data-cat="reforma">
+        <div class="post__meta"><span class="tag">Reforma Tributária</span><time datetime="2026-10-08">08 out 2026</time></div>
+        <h3>2026, o ano-teste da CBS e do IBS: o que já muda na sua nota fiscal</h3>
+        <p>Os novos tributos aparecem nos documentos fiscais em caráter de teste. Entenda o calendário até 2033.</p>
+        <button class="post__more" type="button" data-open>Ler notícia <svg><use href="#i-arrow"/></svg></button>
+        <div class="post__body" hidden>
+          <p>Desde janeiro de 2026, as notas fiscais passaram a destacar a CBS (federal) e o IBS (estadual e municipal) com alíquotas simbólicas de teste — 0,9% e 0,1%, respectivamente. Na prática, o valor pode ser compensado com PIS e COFINS, então o objetivo agora é ajustar sistemas e cadastros.</p>
+          <p>O calendário segue em etapas: em 2027 a CBS passa a valer integralmente e PIS e COFINS deixam de existir. Entre 2029 e 2032, o IBS substitui gradualmente o ICMS e o ISS, até o modelo completo em 2033.</p>
+          <p><strong>O que fazer agora:</strong> revisar o cadastro de produtos (NCM e classificação tributária), conversar com o fornecedor do seu ERP e simular o impacto no preço e na margem. A IFCT já faz esse diagnóstico para clientes do Lucro Real e Presumido.</p>
+        </div>
+      </article>
+
+      <article class="post" data-cat="tributario">
+        <div class="post__meta"><span class="tag">Tributário</span><time datetime="2026-09-29">29 set 2026</time></div>
+        <h3>Créditos de PIS e COFINS: onde o Lucro Real mais deixa dinheiro na mesa</h3>
+        <p>Insumos, frete e energia elétrica estão entre os créditos esquecidos com mais frequência.</p>
+        <button class="post__more" type="button" data-open>Ler notícia <svg><use href="#i-arrow"/></svg></button>
+        <div class="post__body" hidden>
+          <p>No regime não cumulativo, cada real de crédito não aproveitado vira custo. Os pontos que mais aparecem nas nossas revisões são insumos essenciais à atividade, fretes na operação de venda, energia elétrica e depreciação de máquinas.</p>
+          <p>Créditos não aproveitados podem ser recuperados dentro do prazo de cinco anos, desde que haja documentação e fundamentação técnica.</p>
+          <p><strong>Dica:</strong> antes de qualquer pedido de compensação, faça um levantamento técnico. Crédito mal fundamentado vira autuação.</p>
+        </div>
+      </article>
+
+      <article class="post" data-cat="tributario">
+        <div class="post__meta"><span class="tag">Tributário</span><time datetime="2026-09-17">17 set 2026</time></div>
+        <h3>Isenção do IR até R$ 5 mil: o impacto na folha e nos dividendos</h3>
+        <p>A nova faixa alivia salários, mas traz retenção sobre dividendos elevados. Veja o que revisar.</p>
+        <button class="post__more" type="button" data-open>Ler notícia <svg><use href="#i-arrow"/></svg></button>
+        <div class="post__body" hidden>
+          <p>Em vigor desde 2026, a Lei 15.270/2025 isenta do Imposto de Renda quem recebe até R$ 5 mil por mês e reduz parcialmente o imposto para rendas um pouco acima desse valor. Na folha, isso exige parametrização correta das tabelas de retenção.</p>
+          <p>Do outro lado, dividendos acima de R$ 50 mil por mês, pagos pela mesma empresa à mesma pessoa física, passaram a ter retenção na fonte de 10%.</p>
+          <p><strong>O que revisar:</strong> a política de distribuição de lucros dos sócios e a forma de remuneração (pró-labore x dividendos). Um planejamento bem feito evita surpresas na declaração anual.</p>
+        </div>
+      </article>
+
+      <article class="post" data-cat="trabalhista">
+        <div class="post__meta"><span class="tag">Trabalhista</span><time datetime="2026-09-03">03 set 2026</time></div>
+        <h3>FGTS Digital: prazos e cuidados no fechamento da folha</h3>
+        <p>Guia gerada pelo sistema, vencimento no dia 20 e informações vindas do eSocial. O que observar.</p>
+        <button class="post__more" type="button" data-open>Ler notícia <svg><use href="#i-arrow"/></svg></button>
+        <div class="post__body" hidden>
+          <p>Com o FGTS Digital, a guia é emitida a partir das informações enviadas ao eSocial, e o vencimento passou a ser o dia 20 do mês seguinte à competência.</p>
+          <p>Qualquer divergência no eSocial (admissões, afastamentos, rubricas) aparece direto na guia. Por isso, o fechamento da folha precisa estar redondo antes da emissão.</p>
+          <p><strong>Boa prática:</strong> envie admissões, férias e desligamentos para a contabilidade assim que acontecerem, não no fim do mês.</p>
+        </div>
+      </article>
+
+      <article class="post" data-cat="gestao">
+        <div class="post__meta"><span class="tag">Gestão</span><time datetime="2026-08-21">21 ago 2026</time></div>
+        <h3>Holding familiar: quando faz sentido estruturar a sua</h3>
+        <p>Proteção patrimonial e sucessão são os motivos certos. Economia de imposto sozinha, não.</p>
+        <button class="post__more" type="button" data-open>Ler notícia <svg><use href="#i-arrow"/></svg></button>
+        <div class="post__body" hidden>
+          <p>A holding faz mais sentido para quem tem patrimônio relevante (imóveis, participações), mais de uma empresa ou quer organizar a sucessão sem um inventário longo e caro.</p>
+          <p>Ela não é solução universal: custos de constituição, ITBI e obrigações acessórias precisam entrar na conta. O ganho real vem do planejamento conjunto — societário, tributário e familiar.</p>
+        </div>
+      </article>
+
+      <article class="post" data-cat="tributario">
+        <div class="post__meta"><span class="tag">Tributário</span><time datetime="2026-08-06">06 ago 2026</time></div>
+        <h3>CFOP errado na nota: os enganos mais comuns (e como evitar)</h3>
+        <p>Venda para consumidor de outro estado, bonificação e devolução lideram a lista de erros.</p>
+        <button class="post__more" type="button" data-open>Ler notícia <svg><use href="#i-arrow"/></svg></button>
+        <div class="post__body" hidden>
+          <p>Os erros mais frequentes: usar 6102 em venda para consumidor final não contribuinte de outro estado (o correto costuma ser 6108); emitir bonificação como venda; e devolver mercadoria com o CFOP da compra original.</p>
+          <p>O CFOP define como o fisco enxerga a operação e influencia ICMS, PIS e COFINS. Um código errado pode gerar crédito indevido ou imposto a mais.</p>
+          <p>Use a <a href="#cfop" data-close>consulta de CFOP</a> aqui do site como apoio e, em operações especiais, confirme com a equipe.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section faq" id="duvidas">
+  <div class="container faq__grid">
+    <header class="reveal">
+      <p class="eyebrow">Dúvidas frequentes</p>
+      <h2 class="h2">Antes de você perguntar.</h2>
+      <p class="lead">Não encontrou o que procurava? Chame no WhatsApp e responda direto com um especialista.</p>
+      <a class="btn btn--blue" href="https://wa.me/5566992044975" target="_blank" rel="noopener"><svg><use href="#i-whats"/></svg>Falar no WhatsApp</a>
+    </header>
+
+    <div class="faq__list">
+      <details class="qa" open>
+        <summary>A IFCT atende apenas empresas do Lucro Real?<svg><use href="#i-plus"/></svg></summary>
+        <p>Não. Atendemos Simples Nacional, Lucro Presumido e Lucro Real. Nosso foco sempre foi o Lucro Real e, por consequência, oferecemos soluções completas para qualquer regime.</p>
+      </details>
+      <details class="qa">
+        <summary>O que está incluso no serviço de contabilidade?<svg><use href="#i-plus"/></svg></summary>
+        <p>Entrega completa: contábil, fiscal, folha de pagamento, SPEDs (ECD, ECF), e-Lalur, e-Lacs, relatórios de gestão e atendimento consultivo contínuo.</p>
+      </details>
+      <details class="qa">
+        <summary>Vocês fazem recuperação de créditos tributários?<svg><use href="#i-plus"/></svg></summary>
+        <p>Sim. Fazemos levantamentos técnicos de créditos de PIS, COFINS, INSS sobre verbas indenizatórias, ICMS-ST e outras oportunidades legais.</p>
+      </details>
+      <details class="qa">
+        <summary>Como funciona a migração para a IFCT?<svg><use href="#i-plus"/></svg></summary>
+        <p>Assumimos toda a transição: diagnóstico da situação atual, solicitação da documentação e início dos ajustes, sem que você precise se preocupar.</p>
+      </details>
+      <details class="qa">
+        <summary>Vocês atendem empresas de fora do estado?<svg><use href="#i-plus"/></svg></summary>
+        <p>Sim. Com estrutura digital, reuniões remotas e equipe dedicada, atendemos clientes em mais de 21 estados.</p>
+      </details>
+      <details class="qa">
+        <summary>O planejamento tributário é contínuo ou pontual?<svg><use href="#i-plus"/></svg></summary>
+        <p>Os dois. Fazemos diagnósticos pontuais sob demanda e acompanhamento estratégico recorrente, ajustado à evolução da empresa.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTATO ============ -->
+<section class="section contact" id="contato">
+  <div class="container contact__grid">
+    <div class="contact__copy reveal">
+      <p class="eyebrow eyebrow--light">Contato</p>
+      <h2 class="h2">Vamos olhar os números da sua empresa juntos?</h2>
+      <p>Conte um pouco sobre o seu negócio. Um especialista responde pelo WhatsApp, normalmente no mesmo dia útil.</p>
+
+      <ul class="contact__info">
+        <li><span>WhatsApp</span><a href="https://wa.me/5566992044975" target="_blank" rel="noopener">+55 (66) 99204-4975</a></li>
+        <li><span>Instagram</span><a href="https://www.instagram.com/ifctoficial/" target="_blank" rel="noopener">@ifctoficial</a></li>
+        <li><span>CNPJ</span><p>17.915.640/0001-24</p></li>
+      </ul>
+    </div>
+
+    <form class="form reveal" data-form novalidate>
+      <div class="form__row">
+        <label class="input">
+          <span>Seu nome *</span>
+          <input name="nome" required autocomplete="name">
+        </label>
+        <label class="input">
+          <span>WhatsApp *</span>
+          <input name="telefone" type="tel" required inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000" data-phone>
+        </label>
+      </div>
+      <label class="input">
+        <span>Empresa</span>
+        <input name="empresa" autocomplete="organization">
+      </label>
+      <fieldset class="input">
+        <legend>Regime tributário</legend>
+        <div class="pills">
+          <label><input type="radio" name="regime" value="Simples Nacional"><span>Simples</span></label>
+          <label><input type="radio" name="regime" value="Lucro Presumido"><span>Presumido</span></label>
+          <label><input type="radio" name="regime" value="Lucro Real"><span>Real</span></label>
+          <label><input type="radio" name="regime" value="Não sei / abrir empresa"><span>Não sei</span></label>
+        </div>
+      </fieldset>
+      <label class="input">
+        <span>Como podemos ajudar?</span>
+        <textarea name="mensagem" rows="3"></textarea>
+      </label>
+      <button class="btn btn--orange btn--block" type="submit">Enviar pelo WhatsApp <svg><use href="#i-arrow"/></svg></button>
+      <p class="form__msg" data-form-msg role="status"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ RODAPÉ ============ -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="logo" href="#topo" aria-label="IFCT Contabilidade">
+        <img src="assent/LOGO IFCT BRANCA (fundo transparente).png" alt="IFCT Contabilidade" width="3058" height="1186" loading="lazy">
+      </a>
+      <p>Inteligência Fiscal e Consultoria Tributária. Suporte dedicado e especialistas para cada demanda.</p>
+      <div class="social">
+        <a href="https://wa.me/5566992044975" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-whats"/></svg></a>
+        <a href="https://www.instagram.com/ifctoficial/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-insta"/></svg></a>
+        <a href="https://br.linkedin.com/in/ifct-intelig%C3%AAncia-fiscal-bb7b30173" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
+      </div>
+    </div>
+    <nav class="footer__col" aria-label="Institucional">
+      <p>Institucional</p>
+      <a href="#sobre">A IFCT</a><a href="#historia">Nossa história</a><a href="#noticias">Notícias</a><a href="#duvidas">Dúvidas</a>
+    </nav>
+    <nav class="footer__col" aria-label="Soluções">
+      <p>Soluções</p>
+      <a href="#solucoes">Planejamento tributário</a><a href="#solucoes">Recuperação tributária</a><a href="#solucoes">Abertura de empresa</a><a href="#cfop">Consulta CFOP</a>
+    </nav>
+  </div>
+  <div class="container footer__bottom">
+    <p>© <span data-year>2026</span> IFCT Contabilidade · CNPJ 17.915.640/0001-24</p>
+    <p><a href="https://ifctcontabilidade.com.br/termos.html">Termos de uso</a> · <a href="https://ifctcontabilidade.com.br/politica.html">Política de privacidade</a></p>
+  </div>
+</footer>
+
+<!-- WhatsApp flutuante -->
+<a class="fab" href="https://wa.me/5566992044975?text=Ol%C3%A1!%20Encontrei%20o%20contato%20de%20voc%C3%AAs%20atrav%C3%A9s%20do%20site." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg><use href="#i-whats"/></svg>
+</a>
+
+<!-- Modal de leitura das notícias -->
+<dialog class="modal" data-modal aria-labelledby="modal-title">
+  <div class="modal__box">
+    <button class="modal__close" type="button" data-modal-close aria-label="Fechar"><svg><use href="#i-close"/></svg></button>
+    <div class="post__meta" data-modal-meta></div>
+    <h3 id="modal-title" data-modal-title></h3>
+    <div class="modal__body" data-modal-body></div>
+    <a class="btn btn--orange btn--sm" href="#contato" data-close>Falar com um especialista</a>
+  </div>
+</dialog>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
