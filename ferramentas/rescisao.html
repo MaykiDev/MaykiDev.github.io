@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulador de Rescisão 2026 — IFCT Contabilidade</title>
+  <meta name="description" content="Simule a rescisão do contrato de trabalho em 2026: saldo de salário, aviso prévio, 13º, férias, multa do FGTS, INSS e IRRF. Grátis.">
+  <meta name="theme-color" content="#071A3D">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- Sprite de ícones (traço fino, consistente em todo o site) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 21a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m20 20-3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-whats" viewBox="0 0 24 24"><path d="M12 2.5A9.5 9.5 0 0 0 3.8 16.8L2.5 21.5l4.8-1.3A9.5 9.5 0 1 0 12 2.5m0 17.3a7.8 7.8 0 0 1-4-1.1l-.3-.2-2.8.8.8-2.8-.2-.3A7.8 7.8 0 1 1 12 19.8m4.3-5.8c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8.9-.3.2-.5 0a6.4 6.4 0 0 1-3.2-2.8c-.2-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.7-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.6.3 2.7 2.7 0 0 0-.9 2 4.7 4.7 0 0 0 1 2.5 10.7 10.7 0 0 0 4.1 3.6c1.5.7 2.1.7 2.9.6a2.4 2.4 0 0 0 1.6-1.1 2 2 0 0 0 .1-1.1c0-.1-.2-.2-.5-.3" fill="currentColor"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M5 9h3v10H5zM6.5 4.5a1.7 1.7 0 1 1 0 3.4 1.7 1.7 0 0 1 0-3.4M10.5 9h2.9v1.4c.4-.8 1.4-1.6 2.9-1.6 3 0 3.6 2 3.6 4.6V19h-3v-5c0-1.2 0-2.7-1.6-2.7s-1.9 1.3-1.9 2.6V19h-3z" fill="currentColor"/></symbol>
+  <!-- Eventos -->
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></g></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4M8.2 13.2l7.6 4"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></g></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12.2V4.5a1 1 0 0 1 1-1h7.7l8.3 8.3a1.5 1.5 0 0 1 0 2.1l-6.1 6.1a1.5 1.5 0 0 1-2.1 0z"/><circle cx="8" cy="8" r="1.4"/></g></symbol>
+  <!-- Ferramentas -->
+  <symbol id="t-cfop" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h16v24l-3-2-2.7 2-2.6-2-2.7 2-2.6-2L8 28z"/><path d="M12 10h8M12 14h8M12 18h5"/></g></symbol>
+  <symbol id="t-resc" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9V6a1.5 1.5 0 0 0-1.5-1.5h-11A1.5 1.5 0 0 0 5 6v20a1.5 1.5 0 0 0 1.5 1.5h11A1.5 1.5 0 0 0 19 26v-3"/><path d="M12 16h15M23 12l4 4-4 4"/></g></symbol>
+  <symbol id="t-sal" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="24" height="17" rx="3"/><path d="M8 9V7.5A2.5 2.5 0 0 1 10.5 5H22"/><path d="M21 15h7v5h-7a2.5 2.5 0 0 1 0-5z"/></g></symbol>
+  <symbol id="t-cost" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="4.5"/><path d="M4 26a8 8 0 0 1 13.5-5.8"/><circle cx="23" cy="21" r="5.5"/><path d="M23 18.5v5M20.5 21h5"/></g></symbol>
+  <symbol id="t-sd" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16a12 12 0 0 1 24 0z"/><path d="M16 16v8a3 3 0 0 1-6 0M16 4v-.5"/></g></symbol>
+</svg>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ============ CABEÇALHO ============ -->
+<header class="header" data-header>
+  <div class="topbar">
+    <div class="container topbar__in">
+      <p>Inteligência Fiscal e Consultoria Tributária · Atendimento em 21 estados</p>
+      <div class="topbar__links">
+        <a href="tel:+5566992044975"><svg><use href="#i-phone"/></svg>(66) 99204-4975</a>
+        <a href="https://www.instagram.com/ifctoficial/" target="_blank" rel="noopener">@ifctoficial</a>
+        <a class="topbar__client" href="../index.html#contato"><svg><use href="#i-user"/></svg>Área do cliente</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container nav">
+    <a class="logo" href="../index.html" aria-label="IFCT Contabilidade — início">
+      <img src="../assent/LOGO IFCT COLORIDA (fundo transparente).png" alt="IFCT Contabilidade" width="3058" height="1186">
+    </a>
+
+    <nav class="nav__menu" id="menu" aria-label="Principal" data-menu>
+      <ul>
+        <li><a href="../index.html#solucoes">Soluções</a></li>
+        <li><a href="../index.html#sobre">A IFCT</a></li>
+        <li><a href="../ferramentas.html" class="is-current" aria-current="page">Ferramentas</a></li>
+        <li><a href="../eventos.html">Eventos</a></li>
+        <li><a href="../index.html#noticias">Notícias</a></li>
+        <li><a href="../index.html#contato">Contato</a></li>
+      </ul>
+      <a class="btn btn--orange nav__cta-mobile" href="../index.html#contato">Solicitar proposta</a>
+      <p class="nav__mobile-foot">(66) 99204-4975 · CNPJ 17.915.640/0001-24</p>
+    </nav>
+
+    <a class="btn btn--orange btn--sm nav__cta" href="../index.html#contato">Solicitar proposta</a>
+
+    <button class="burger" type="button" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu" data-burger>
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="conteudo">
+<section class="page-hero">
+  <div class="container">
+    <a class="back-link" href="../ferramentas.html"><svg aria-hidden="true"><use href="#i-arrow"/></svg>Todas as ferramentas</a>
+    <ol class="crumbs">
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="../ferramentas.html">Ferramentas</a></li>
+        <li aria-current="page">Simulador de rescisão</li>
+      </ol>
+    <p class="eyebrow eyebrow--light">Ferramenta gratuita</p>
+    <h1>Simulador de Rescisão 2026</h1>
+    <p class="page-hero__lead">Descubra quanto recebe (ou paga) em cada tipo de desligamento: sem justa causa, pedido de demissão, acordo ou justa causa.</p>
+    <ul class="page-hero__meta">
+      <li><svg><use href="#i-check"/></svg>Aviso prévio proporcional</li>
+      <li><svg><use href="#i-check"/></svg>INSS e IRRF 2026</li>
+      <li><svg><use href="#i-check"/></svg>Multa e saque do FGTS</li>
+    </ul>
+  </div>
+</section>
+
+<section class="calc-wrap">
+  <div class="container calc">
+    <form class="calc__form tool" data-calc="rescisao" novalidate>
+      <h2 class="calc__title">Dados do contrato</h2>
+      <label class="input">
+          <span>Último salário bruto</span>
+          <span class="money"><input name="salario" inputmode="numeric" autocomplete="off" value="3.500,00" data-money></span>
+          <small>Inclua adicionais fixos, como insalubridade ou periculosidade.</small>
+        </label>
+      <div class="grid-2">
+        <label class="input">
+          <span>Data de admissão</span>
+          <input type="date" name="admissao" value="2023-03-01" required>
+        </label>
+        <label class="input">
+          <span>Data de desligamento</span>
+          <input type="date" name="saida" required data-today>
+        </label>
+      </div>
+      <label class="input">
+        <span>Motivo do desligamento</span>
+        <span class="select"><select name="motivo">
+          <option value="sem-justa">Demissão sem justa causa</option>
+          <option value="pedido">Pedido de demissão</option>
+          <option value="acordo">Acordo entre as partes (art. 484-A)</option>
+          <option value="justa">Demissão por justa causa</option>
+        </select></span>
+      </label>
+      <label class="input" data-aviso-field>
+        <span>Aviso prévio</span>
+        <span class="select"><select name="aviso"></select></span>
+      </label>
+      <div class="grid-2">
+        <label class="input">
+          <span>Férias vencidas</span>
+          <span class="select"><select name="vencidas">
+            <option value="0">Não tenho</option>
+            <option value="1">1 período</option>
+            <option value="2">2 períodos</option>
+          </select></span>
+        </label>
+        <label class="input">
+          <span>Saldo do FGTS</span>
+          <span class="money"><input name="fgts" inputmode="numeric" autocomplete="off" value="0,00" data-money></span>
+          <small>Deixe zerado para estimarmos.</small>
+        </label>
+      </div>
+    </form>
+
+    <div class="out" data-out>
+        <div aria-live="polite">
+          <span class="out__kicker">Valor líquido a receber</span>
+          <strong class="out__total" data-total>R$ 0,00</strong>
+          <p class="out__sub" data-sub></p>
+        </div>
+        <p class="out__alert" data-alert></p>
+        <div class="split" data-split aria-hidden="true"></div>
+        <ul class="legend" data-legend></ul>
+        <ul class="lines" data-lines></ul>
+        <div data-extra></div>
+        <p class="out__note">Simulação orientativa com as tabelas oficiais de 2026. Convenções coletivas, médias de horas extras, adicionais e situações específicas podem alterar os valores.</p>
+      </div>
+  </div>
+</section>
+
+<section class="section explain" aria-labelledby="exp-title">
+  <div class="container explain__grid">
+    <div class="prose reveal">
+      <p class="eyebrow">Como calculamos</p>
+      <h2 class="h2" id="exp-title">O que entra em cada tipo de rescisão.</h2>
+      <div class="table-scroll">
+        <table class="ref-table">
+          <thead><tr><th>Verba</th><th>Sem justa causa</th><th>Pedido</th><th>Acordo</th><th>Justa causa</th></tr></thead>
+          <tbody>
+            <tr><td>Saldo de salário</td><td>Sim</td><td>Sim</td><td>Sim</td><td>Sim</td></tr>
+            <tr><td>Aviso prévio indenizado</td><td>Integral</td><td>Não</td><td>Metade</td><td>Não</td></tr>
+            <tr><td>13º proporcional</td><td>Sim</td><td>Sim</td><td>Sim</td><td>Não</td></tr>
+            <tr><td>Férias vencidas + 1/3</td><td>Sim</td><td>Sim</td><td>Sim</td><td>Sim</td></tr>
+            <tr><td>Férias proporcionais + 1/3</td><td>Sim</td><td>Sim</td><td>Sim</td><td>Não</td></tr>
+            <tr><td>Multa do FGTS</td><td>40%</td><td>Não</td><td>20%</td><td>Não</td></tr>
+            <tr><td>Saque do FGTS</td><td>100%</td><td>Não</td><td>80%</td><td>Não</td></tr>
+            <tr><td>Seguro-desemprego</td><td>Sim</td><td>Não</td><td>Não</td><td>Não</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Regras usadas na simulação</h3>
+      <ul>
+        <li><strong>Aviso prévio proporcional:</strong> 30 dias + 3 dias por ano completo de empresa, até 90 dias (Lei 12.506/2011). Quando indenizado, ele conta como tempo de serviço para 13º e férias.</li>
+        <li><strong>Avos:</strong> cada mês com 15 dias ou mais trabalhados vale 1/12 de 13º e de férias.</li>
+        <li><strong>Descontos:</strong> INSS e IRRF incidem sobre saldo de salário e 13º, calculados separadamente. Férias indenizadas e aviso prévio indenizado não sofrem esses descontos.</li>
+        <li><strong>Pedido sem cumprir aviso:</strong> a empresa pode descontar até um salário.</li>
+      </ul>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">Dúvidas frequentes</p>
+      <div class="faq__list">
+        <details class="qa" open>
+          <summary>Qual o prazo para a empresa pagar a rescisão?<svg><use href="#i-plus"/></svg></summary>
+          <p>Até 10 dias corridos após o término do contrato, qualquer que seja o tipo de aviso (art. 477 da CLT). O atraso gera multa de um salário a favor do empregado.</p>
+        </details>
+        <details class="qa">
+          <summary>O aviso prévio trabalhado pode ser reduzido?<svg><use href="#i-plus"/></svg></summary>
+          <p>Sim. Na demissão sem justa causa com aviso trabalhado, o empregado escolhe entre sair 2 horas mais cedo por dia ou faltar 7 dias corridos, sem desconto.</p>
+        </details>
+        <details class="qa">
+          <summary>Como funciona o acordo do art. 484-A?<svg><use href="#i-plus"/></svg></summary>
+          <p>Empresa e empregado decidem juntos encerrar o contrato. O empregado recebe metade do aviso indenizado e 20% de multa do FGTS, pode sacar 80% do saldo, mas não tem direito ao seguro-desemprego.</p>
+        </details>
+        <details class="qa">
+          <summary>Por que o valor do FGTS é estimado?<svg><use href="#i-plus"/></svg></summary>
+          <p>O saldo real depende dos depósitos feitos durante todo o contrato e da correção. Para um cálculo exato da multa, informe o saldo que aparece no app FGTS.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="related" aria-labelledby="rel-title">
+  <div class="container">
+    <header class="section-head">
+      <div>
+        <p class="eyebrow">Outras ferramentas</p>
+        <h2 class="h2" id="rel-title">Continue calculando.</h2>
+      </div>
+      <a class="link-arrow" href="../ferramentas.html">Ver todas <svg><use href="#i-arrow"/></svg></a>
+    </header>
+    <div class="tools-grid">
+      <article class="tool-card reveal">
+        <svg class="tool-card__icon"><use href="#t-cfop"/></svg>
+        
+        <h3>Consulta CFOP</h3>
+        <p>Responda três perguntas e descubra o código fiscal mais comum para a sua nota. Ou busque pelo número.</p>
+        <a class="tool-card__go" href="../ferramentas/cfop.html">Abrir ferramenta <svg><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="tool-card reveal">
+        <svg class="tool-card__icon"><use href="#t-sal"/></svg>
+        
+        <h3>Calculadora de Salário Líquido 2026</h3>
+        <p>Quanto cai na conta depois do INSS e do IRRF, já com a nova isenção do IR até R$ 5 mil.</p>
+        <a class="tool-card__go" href="../ferramentas/salario-liquido.html">Abrir ferramenta <svg><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="tool-card reveal">
+        <svg class="tool-card__icon"><use href="#t-cost"/></svg>
+        
+        <h3>Custo do Empregado CLT 2026</h3>
+        <p>Encargos, provisões e benefícios: quanto um funcionário custa de verdade para a empresa.</p>
+        <a class="tool-card__go" href="../ferramentas/custo-clt.html">Abrir ferramenta <svg><use href="#i-arrow"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" aria-labelledby="cta-title">
+  <div class="container">
+    <div class="cta-box reveal">
+      <div>
+        <p class="eyebrow eyebrow--light">Departamento pessoal</p>
+        <h2 class="h2" id="cta-title">Vai desligar alguém? Faça a rescisão sem passivo trabalhista.</h2>
+        <p>O departamento pessoal da IFCT calcula, confere e envia ao eSocial cada rescisão, com prazos, guias do FGTS e documentos em dia. Menos risco de processo, mais tranquilidade para você.</p>
+      </div>
+      <div class="cta-box__actions">
+        <a class="btn btn--orange" href="https://wa.me/5566992044975?text=Ol%C3%A1!%20Usei%20o%20simulador%20de%20rescis%C3%A3o%20do%20site%20e%20preciso%20de%20ajuda%20com%20o%20departamento%20pessoal%20da%20minha%20empresa." target="_blank" rel="noopener"><svg><use href="#i-whats"/></svg>Falar com um especialista</a>
+        <a class="btn btn--ghost-light" href="../index.html#contato">Solicitar proposta</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ RODAPÉ ============ -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="logo" href="../index.html" aria-label="IFCT Contabilidade">
+        <img src="../assent/LOGO IFCT BRANCA (fundo transparente).png" alt="IFCT Contabilidade" width="3058" height="1186" loading="lazy">
+      </a>
+      <p>Inteligência Fiscal e Consultoria Tributária. Suporte dedicado e especialistas para cada demanda.</p>
+      <div class="social">
+        <a href="https://wa.me/5566992044975" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-whats"/></svg></a>
+        <a href="https://www.instagram.com/ifctoficial/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-insta"/></svg></a>
+        <a href="https://br.linkedin.com/in/ifct-intelig%C3%AAncia-fiscal-bb7b30173" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
+      </div>
+    </div>
+    <nav class="footer__col" aria-label="Institucional">
+      <p>Institucional</p>
+      <a href="../index.html#sobre">A IFCT</a><a href="../index.html#historia">Nossa história</a><a href="../eventos.html">Eventos</a><a href="../index.html#noticias">Notícias</a><a href="../index.html#duvidas">Dúvidas</a>
+    </nav>
+    <nav class="footer__col" aria-label="Soluções">
+      <p>Soluções</p>
+      <a href="../index.html#solucoes">Planejamento tributário</a><a href="../index.html#solucoes">Recuperação tributária</a><a href="../index.html#solucoes">Abertura de empresa</a><a href="../index.html#solucoes">Holding</a>
+    </nav>
+    <nav class="footer__col" aria-label="Ferramentas">
+      <p>Ferramentas</p>
+      <a href="../ferramentas/cfop.html">Consulta CFOP</a><a href="../ferramentas/rescisao.html">Simulador de rescisão</a><a href="../ferramentas/salario-liquido.html">Salário líquido</a><a href="../ferramentas/custo-clt.html">Custo do empregado CLT</a><a href="../ferramentas/seguro-desemprego.html">Seguro-desemprego</a>
+    </nav>
+  </div>
+  <div class="container footer__bottom">
+    <p>© <span data-year>2026</span> IFCT Contabilidade · CNPJ 17.915.640/0001-24</p>
+    <p><a href="https://ifctcontabilidade.com.br/termos.html">Termos de uso</a> · <a href="https://ifctcontabilidade.com.br/politica.html">Política de privacidade</a></p>
+  </div>
+</footer>
+
+<!-- WhatsApp flutuante -->
+<a class="fab" href="https://wa.me/5566992044975?text=Ol%C3%A1!%20Encontrei%20o%20contato%20de%20voc%C3%AAs%20atrav%C3%A9s%20do%20site." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg><use href="#i-whats"/></svg>
+</a>
+
+<script src="../js/main.js" defer></script>
+<script src="../js/calculadoras.js" defer></script>
+</body>
+</html>

@@ -367,6 +367,17 @@ const LOCAL_LABEL = { estadual: 'Mesmo estado', interestadual: 'Outro estado', e
   }, { once: true });
 })();
 
+/* ---------- Máscara de telefone (vale também para formulários criados via JS) ---------- */
+document.addEventListener('input', e => {
+  const phone = e.target.closest?.('[data-phone]');
+  if (!phone) return;
+  const d = phone.value.replace(/\D/g, '').slice(0, 11);
+  let v = d;
+  if (d.length > 2) v = `(${d.slice(0, 2)}) ${d.slice(2)}`;
+  if (d.length > 7) v = `(${d.slice(0, 2)}) ${d.slice(2, d.length - 4)}-${d.slice(-4)}`;
+  phone.value = v;
+});
+
 /* ==========================================================================
    FORMULÁRIO → WhatsApp (funciona sem servidor)
    ========================================================================== */
@@ -374,17 +385,6 @@ const LOCAL_LABEL = { estadual: 'Mesmo estado', interestadual: 'Outro estado', e
   const form = $('[data-form]');
   if (!form) return;
   const msg = $('[data-form-msg]', form);
-  const phone = $('[data-phone]', form);
-
-  // Máscara simples de telefone
-  phone.addEventListener('input', () => {
-    const d = phone.value.replace(/\D/g, '').slice(0, 11);
-    let v = d;
-    if (d.length > 2) v = `(${d.slice(0, 2)}) ${d.slice(2)}`;
-    if (d.length > 7) v = `(${d.slice(0, 2)}) ${d.slice(2, d.length - 4)}-${d.slice(-4)}`;
-    phone.value = v;
-  });
-
   form.addEventListener('submit', e => {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(form));
